@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main(){
+    char month[10];
+    int date, year;
+    printf("Enter your date i.e. 31 Jan 2020 :\n");
+    scanf("%d %s %d", &date, &month, &year);
+        if(strcmp(month,"FEB")==0 || strcmp(month,"Feb")==0 ){
+            if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) && (date == 29 && (strcmp(month,"FEB")==0 || strcmp(month,"Feb")==0)))
+            { printf("Valid"); }
+            else if(date <29){ printf("Valid"); }
+            }
+            else{
+                printf("Invalid");
+            }
+        }
+        else if(date <= 31 && (strcmp(month,"JAN")== 0 || strcmp(month,"Jan")== 0 || strcmp(month,"MAR")==0 || strcmp(month,"Mar")==0 || strcmp(month,"MAY")==0 || strcmp(month,"May")==0 || strcmp(month,"JUL")==0 || strcmp(month,"Jul")==0 || strcmp(month,"AUG")==0 || strcmp(month,"Aug")==0 || strcmp(month,"OCT")==0 || strcmp(month,"Oct")==0 || strcmp(month,"DEC")==0 || strcmp(month,"Dec")==0 )){
+            printf("Valid");
+        }
+        else if(date <= 30 && (strcmp(month,"APR")== 0 || strcmp(month,"Apr")== 0 || strcmp(month,"JUN")==0 || strcmp(month,"Jun")==0 || strcmp(month,"SEP")==0 || strcmp(month,"Sep")==0 || strcmp(month,"NOV")==0 || strcmp(month,"Nov")==0 )){
+            printf("Valid");
+        }
+        else{
+            printf("Invalid");
+        }
+    getch();
+}
